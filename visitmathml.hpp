@@ -13,7 +13,7 @@ class VisitMathMl : public Visitor {
 		int var1 = 0;
 		int var2 = 0;
 
-	pubic:
+	public:
 		void visit_op(Op* node) {
 			for (int i = 0; i < var1; i++) {
 				exp = exp + "\t";
@@ -23,7 +23,7 @@ class VisitMathMl : public Visitor {
 		}
 	
 		void visit_rand(Rand* node) {
-			for (int i = 0; i < var1; i+=) {
+			for (int i = 0; i < var1; i++) {
 				exp = exp + "\t";
 			}
 			
@@ -62,8 +62,13 @@ class VisitMathMl : public Visitor {
 			for (int i = 0; i < var1; i++) {
 				exp = exp + "\t";
 			}
+			exp = exp + "<apply>\n";
 
-			exp = exp "<minus/>\n";
+			var1++;
+			for(int i = 0; i < var1; i++) {
+				exp = exp + "\t";
+			}
+			exp = exp +  "<minus/>\n";
 		}
 
         void visit_sub_middle(Sub* node) {}

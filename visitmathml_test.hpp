@@ -20,7 +20,7 @@ TEST(MathML, 45minus20) {
 	delete sub;
 }
 
-TEST(MathML 5times6) {
+TEST(MathML, 5times6) {
 	Base* mult = new Mult(new Op(5), new Op(6));
 	EXPECT_EQ("<math>\n\t<apply>\n\t\t<times/>\n\t\t<cn>5.000000</cn>\n\t\t<cn>6.000000</cn>\n\t</apply>\n</math>", print_mathML(mult));
 	delete mult;

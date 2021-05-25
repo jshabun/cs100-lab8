@@ -34,11 +34,11 @@ class Sub: public Base {
 	
 	virtual void accept(Visitor* visit, int index) {
 				if (index == 0)
-				visitor->visit_sub_begin(this);
+				visit->visit_sub_begin(this);
 			else if (index == 1)
-				visitor->visit_sub_middle(this);
+				visit->visit_sub_middle(this);
 			else if (index == 2)
-				visitor->visit_sub_end(this);
+				visit->visit_sub_end(this);
 	}
 
    private:

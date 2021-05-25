@@ -13,11 +13,11 @@ TEST(FunctionTest, AddGetChild)
 {
         Base *seven = new Op(7);
         Base *three = new Op(3);
-        Base *add = new Add(one,three);
+        Base *add = new Add(seven,three);
 
         EXPECT_EQ("7.000000", add->get_child(0)->stringify());
         EXPECT_EQ("3.000000", add->get_child(1)->stringify());
-        EXPECT_EQ(1.000000, add->get_child(0)->evaluate());
+        EXPECT_EQ(7.000000, add->get_child(0)->evaluate());
         EXPECT_EQ(3.000000, add->get_child(1)->evaluate());
 
         delete add;
@@ -44,7 +44,7 @@ TEST(FunctionTest, SubGetChild_LeftOperandAdd)
         Base *right = new Op(3);
         Base *sub = new Sub(left, right);
 
-        EXPECT_EQ("4.000000 + 5.000000)", sub->get_child(0)->stringify());
+        EXPECT_EQ("(4.000000 + 5.000000)", sub->get_child(0)->stringify());
         EXPECT_EQ("3.000000", sub->get_child(1)->stringify());
         EXPECT_EQ(9.000000, sub->get_child(0)->evaluate());
         EXPECT_EQ(3.000000, sub->get_child(1)->evaluate());

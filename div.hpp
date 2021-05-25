@@ -26,9 +26,9 @@ class Div: public Base {
 	virtual int number_of_children() {return 2;}
 	virtual Base* get_child(int i) {
 		if (i == 0)
-			return this->lhs;
+			return this->div1;
 		if (i == 1)
-			return this->rhs;
+			return this->div2;
 	}
 
 	virtual void accept(Visitor* visitor, int index) {
