@@ -1,8 +1,8 @@
 #ifndef __PRINT_HPP__
 #define __PRINT_HPP__
 
-#include "visitorLETEX.hpp"
-#include "visitMathML.hpp"
+#include "visitorLATEX.hpp"
+#include "visitmathml.hpp"
 #include "iterator.hpp"
 #include <string>
 
@@ -24,7 +24,7 @@ string print_latex(Base* ptr) {
 }
 
 string print_mathML(Base* ptr) {
-	VisitorMathML* visit = new VisitorMathML();
+	VisitMathMl* visit = new VisitMathMl();
 	Iterator iter(ptr);
 	
 	while(!iter.is_done()) {
