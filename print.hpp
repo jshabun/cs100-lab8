@@ -1,8 +1,8 @@
 #ifndef __PRINT_HPP__
 #define __PRINT_HPP__
 
-#include "visitorLaTeX.hpp"
-#include "visitorMathML.hpp"
+#include "visitorLETEX.hpp"
+#include "visitMathML.hpp"
 #include "iterator.hpp"
 #include <string>
 
