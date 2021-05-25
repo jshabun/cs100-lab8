@@ -8,6 +8,9 @@
 #include "rand_test.hpp"
 #include "mult_test.hpp"
 #include "parse_test.hpp"
+#include "iterator_test.hpp"
+#include "latex_test.hpp"
+#include "visitmathml_test.hpp"
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
